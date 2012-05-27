@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Zombicide</title>
+        <meta name="description" content="Stuff">
+        <meta name="author" content="Kimberly Hice">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="/link/to/favicon.ico">
+        <link rel="apple-touch-icon" href="/link/to/apple-touch-icon.png">
+
+        <link rel="stylesheet" href="style.css" media="all">
+        <!--[if (lt IE 9) & (!IEMobile)]>
+            <link rel="stylesheet" href="test/css/example/layout.css" media="all">
+        <![endif]-->
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        
+        <!-- Courtesy of http://www.webdeveloperjuice.com/2010/01/12/lightest-jquery-content-slider-ever-made-380-bytes/ -->
+        <script type="text/JavaScript">
+        $(document).ready(function (){
+                $('#button a').click(function(){
+                        var integer = $(this).attr('rel'); /* Button # */
+                        $('#myslide .wholeshow').animate({left:-800*(parseInt(integer)-1)})  /* Width of slide */
+                        $('#button a').each(function(){
+                        $(this).removeClass('active');
+                                if($(this).hasClass('button'+integer)){
+                                        $(this).addClass('active')}
+                        });
+                });	
+        });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="Images/logo.gif" class="logo_image">
+            <br><h2 class="logo_def">Def: To make the world safer, one headless zombie at a time</h2>
+        
+
+            <div id="social">
+                <a href="notready.html"><img src="Images/facebook.png" class="social_icon"></a>
+                <a href="notready.html"><img src="Images/twitter.PNG" class="social_icon"></a>
+                <a href="notready.html"><img src="Images/google.png" class="social_icon"></a>
+            </div>
+        </div>
+        
+        <div id="banner">
+            <div id="button">
+                <a class="button1 active" rel="1" href="#"></a>
+                <a class="button2" rel="2" href="#"></a>
+                <a class="button3" rel="3" href="#"></a>
+            </div>
+            <br>
+
+            <div id="myslide" class="center">
+                    <div class="wholeshow">
+                            <div class="slide">
+                                <img src="Images/banner1.jpg" class="slideImg">
+                                <br><span class="caption">A mob of zombies roaming through a college campuses after finals</span>
+                            </div>
+                            <div class="slide">
+                                <img src="Images/banner2.jpg" class="slideImg">
+                                <br><span class="caption">Roads are becoming abandoned from crowds of zombies</span>
+                            </div>
+                            <div class="slide">
+                                 <img src="Images/banner3.jpg" class="slideImg">
+                                 <br><span class="caption">Watch Zombieland to learn all essential survival rules</span>
+                            </div>
+
+                    </div>
+            </div>
+        </div>
+        
+        <div id="links" class="center">
+            <table class="navTable center">
+                <tr>
+                    <td class="navCell">
+                        <a href="findzombies.html"><img src="Images/unsure.gif"><h2>How to Spot a Zombie</h2></a>
+                    </td>
+                    <td class="navCell">
+                        <a href="iwanttolive.html"><img src="Images/fighter.gif"><h2>What You Need To Survive</h2></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="navCell">
+                        <a href="howithappened.html"><img src="Images/history.gif"><h2>History of Zombies</h2></a>
+                    </td>
+                    <td class="navCell">
+                        <a href="about.html"><img src="Images/about.gif"><h2>About Us</h2></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="welcome">       
+            <h1>Welcome to Zombicide!</h1>
+            
+            <p>Welcome to Zombicide, your one stop resource to learn how to protect yourself now that the world has come to an end.
+            <br>
+            <br>We provide you up to date information* on how to determine if the person you are looking at is really a zombie and what you need to know if you encounter a potential zombie.  </p>
+            <br>
+            <p class="disclaimer">* until the power grid goes down.</p>
+        </div>
+            
+    </body>
+</html>

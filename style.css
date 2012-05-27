@@ -1,0 +1,247 @@
+/* 
+    Document   : CSS
+    Created on : May 23, 2012, 9:44:46 PM
+    Author     : Kimberly
+    Description: Dictate style of pages, content
+*/
+
+@import url('http://fonts.googleapis.com/css?family=Boogaloo');
+@import url('http://fonts.googleapis.com/css?family=Averia Libre');
+
+/* Reset all whitespace, font sizes, alignment 
+----------------------------------------------*/
+html, body, 
+h1, h2, h3, h4, h5, h6, 
+p, a, 
+strike, strong, b, u, i, 
+dl, dt, dd, ol, ul, li,
+table, tr, td,
+span, div{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+  
+/* Default formatting 
+----------------------------------------------*/
+html { 
+  overflow-y: scroll;
+  }
+  
+body {
+    font-family: "Averia Libre", serif;
+    color: #9c8c8c;
+    background-color: #000000;
+    margin: 0 auto;
+    padding: 2em 5%; 
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+p {
+    padding: 0.5em 0%;
+}
+
+/* Page titles */
+h1 {
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+/* Section titles */
+h2 {
+    font-size: 1.3em; 
+    font-weight: bold;
+}
+
+/* Links */
+a, a:active, a:visited { 
+    outline: none; 
+    color: #9c8c8c; 
+    text-decoration: underline; 
+    font-weight: bold;
+}  
+
+a:hover { 
+    outline: none; 
+    color: #ffffff;
+}  
+
+
+/* Specialized formatting
+------------------------------------------------------*/
+div.header {
+    
+}
+
+/* Definition of Zombicide */
+h2.logo_def {
+    font-family: "Boogaloo", serif;
+}
+
+span.caption {
+    
+}
+
+p.disclaimer {
+    font-size: 0.5em;
+}
+
+table.navTable {
+    border-spacing: 1em;
+    text-align: center;
+}
+
+td.navCell {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 200px;
+}
+
+.translucent {
+    background-color: rgba(0, 0, 0, 0.75); /* 75% opacity */
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+td.yesno {
+    width: 75px; 
+    vertical-align: middle;
+}
+
+.left {
+    clear: left;
+    float: left;
+}
+
+.right {
+    clear: right;
+    float: right;
+}
+
+.center {
+    clear: both;
+    text-align: center;
+    margin: 0px auto; /* center horizontally */
+}
+
+#social {
+    padding-bottom: 1.5em;
+}
+
+#myslide { /* Slideshow viewport */
+    width: 800px;
+    height: 330px; 
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#myslide .wholeshow{ /* Length of whole slideshow */
+    width: 2415px;
+    position: absolute;                
+}
+
+#myslide .slide { /* Individual slide */
+    width: 800px;
+    float: left;
+    text-align: center;
+}
+
+img.slideImg {
+    max-height: 300px;
+}
+
+.active, .button1, .button2, .button3 {
+    background: #999;
+    padding: 10px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.active {
+    background: #ccc;
+}
+
+/* Format under assumption of small viewport
+------------------------------------------------------*/
+img.social_icon {
+    max-width: 48px;
+}
+
+#social {
+    text-align: left;
+}
+
+#welcome, #banner {
+    visibility: hidden; 
+    position: absolute; /* allow other objects to move up */
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+        
+/* Format under assumption of medium viewport
+------------------------------------------------------*/
+@media screen and (min-width: 32em){   
+    body { 
+        background-image: url(Images/background.gif);
+        background-position: top center;
+        background-repeat: repeat;
+    }
+    
+    #welcome {  
+        visibility: visible;
+        position: static; 
+        height: auto;
+        width: auto;
+        margin: 0px auto; /* center horizontally */
+        padding: 1.5em 2%;
+        background-color: rgba(0, 0, 0, 0.50); /* 75% opacity */
+        /* For IE 5.5 - 7*/
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+        /* For IE 8*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    }
+    
+    #social {
+        text-align: right;
+    }    
+}
+
+/* Format under assumption of large viewport/desktop
+------------------------------------------------------*/
+@media screen and (min-width: 60em){    
+    #links{
+        float: right; /* 2x2 column */
+        width: 50%;    
+   }
+    
+    img.social_icon {
+        max-width: 32px;
+    }
+    
+    #banner { 
+        visibility: visible;
+        position: static; 
+        height: 350px;
+        width: 90%;
+        margin: 0px auto; /* center horizontally */
+    } 
+}
+
+
+
+
+
