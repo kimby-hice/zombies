@@ -11,4 +11,4 @@ I have not yet had a chance to optimize the pages for efficient, conditional loa
 
 To view the website as it is presently, go to http://kimby.org
 
-Optionally, download or upload these pages to your webserver, preserving current directory structure, and view Home.html
+Optionally, or if my web server is off, download/upload these pages to your webserver, preserving current directory structure, and view Home.html
