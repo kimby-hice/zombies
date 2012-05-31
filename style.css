@@ -49,19 +49,16 @@ p {
     padding: 0.5em 0%;
 }
 
-/* Page titles */
 h1 {
     font-size: 1.75em;
     font-weight: bold;
 }
 
-/* Section titles */
 h2 {
     font-size: 1.3em; 
     font-weight: bold;
 }
 
-/* Links */
 a, a:active, a:visited { 
     outline: none; 
     color: #9c8c8c; 
@@ -75,19 +72,10 @@ a:hover {
 }  
 
 
-/* Specialized formatting
-------------------------------------------------------*/
-div.header {
-    
-}
-
-/* Definition of Zombicide */
+/* Classes, specific ID's'
+----------------------------------------------*/
 h2.logo_def {
     font-family: "Boogaloo", serif;
-}
-
-span.caption {
-    
 }
 
 p.disclaimer {
@@ -114,7 +102,7 @@ td.navCell {
 }
 
 td.yesno {
-    width: 75px; 
+    width: 10%;
     vertical-align: middle;
 }
 
@@ -138,29 +126,6 @@ td.yesno {
     padding-bottom: 1.5em;
 }
 
-#myslide { /* Slideshow viewport */
-    width: 800px;
-    height: 330px; 
-    overflow: hidden;
-    position: relative;
-    
-}
-
-#myslide .wholeshow{ /* Length of whole slideshow */
-    width: 2415px;
-    position: absolute;                
-}
-
-#myslide .slide { /* Individual slide */
-    width: 800px;
-    float: left;
-    text-align: center;
-}
-
-img.slideImg {
-    max-height: 300px;
-}
-
 .active, .button1, .button2, .button3 {
     background: #999;
     padding: 10px;
@@ -174,7 +139,7 @@ img.slideImg {
 }
 
 /* Format under assumption of small viewport
-------------------------------------------------------*/
+----------------------------------------------*/
 img.social_icon {
     max-width: 48px;
 }
@@ -193,8 +158,8 @@ img.social_icon {
 
         
 /* Format under assumption of medium viewport
-------------------------------------------------------*/
-@media screen and (min-width: 32em){   
+----------------------------------------------*/
+@media screen and (min-device-width: 480px){
     body { 
         background-image: url(Images/background.gif);
         background-position: top center;
@@ -222,7 +187,7 @@ img.social_icon {
 
 /* Format under assumption of large viewport/desktop
 ------------------------------------------------------*/
-@media screen and (min-width: 60em){    
+@media screen and (min-device-width: 800px){
     #links{
         float: right; /* 2x2 column */
         width: 50%;    
@@ -238,10 +203,27 @@ img.social_icon {
         height: 350px;
         width: 90%;
         margin: 0px auto; /* center horizontally */
-    } 
+    }
+
+    #myslide { /* Slideshow viewport */
+    width: 800px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+    }
+
+    #myslide .wholeshow{ /* Length of whole slideshow */
+	width: 2415px;
+	position: absolute;
+    }
+
+    #myslide .slide { /* Individual slide */
+	width: 800px;
+	float: left;
+	text-align: center;
+    }
+
+    img.slideImg {
+	max-height: 300px;
+    }
 }
-
-
-
-
-
